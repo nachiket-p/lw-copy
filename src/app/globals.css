@@ -7,64 +7,70 @@
   /* Logicwind Brand Colors */
   --hero-lime: #D4F620;
   --deep-navy: #0B3B4D;
-  --light-beige: #F5F0E8;
   --pure-white: #FFFFFF;
+  --light-beige: #F5F0E8;
   --black: #000000;
+  
+  /* Legacy colors (kept for compatibility) */
+  --logicwind-blue: #0E151E;
+  --logicwind-red: #F04F4B;
+  --blue-grey: #D2D6E5;
+  --neutral-grey: #585E75;
 
   /* Border radius */
   --radius: 0.625rem;
 
   /* Logicwind Theme Integration */
-  --background: oklch(1 0 0);                      /* Pure white */
-  --foreground: oklch(0.145 0 0);                  /* Near black */
+  --background: oklch(1 0 0);                      /* Pure white background */
+  --foreground: oklch(0.11 0.015 240);             /* Logicwind Blue text (#0E151E) */
   
   --card: oklch(1 0 0);                           /* White cards */
-  --card-foreground: oklch(0.145 0 0);            /* Dark text on cards */
+  --card-foreground: oklch(0.11 0.015 240);       /* Logicwind Blue text on cards */
   
   --popover: oklch(1 0 0);                        /* White popovers */
-  --popover-foreground: oklch(0.145 0 0);         /* Dark text in popovers */
+  --popover-foreground: oklch(0.11 0.015 240);    /* Logicwind Blue text in popovers */
   
-  /* Hero Lime as primary color */
-  --primary: oklch(0.85 0.2 102);                 /* Hero Lime (#D4F620) */
-  --primary-foreground: oklch(0.145 0 0);         /* Dark text on lime */
+  /* Logicwind Red as primary accent */
+  --primary: oklch(0.59 0.22 15);                 /* Logicwind Red (#F04F4B) */
+  --primary-foreground: oklch(1 0 0);             /* White text on red */
   
-  /* Light Beige as secondary */
-  --secondary: oklch(0.96 0.02 85);               /* Light Beige (#F5F0E8) */
-  --secondary-foreground: oklch(0.145 0 0);       /* Dark text on beige */
+  /* Blue Grey as secondary */
+  --secondary: oklch(0.88 0.02 250);              /* Blue Grey (#D2D6E5) */
+  --secondary-foreground: oklch(0.11 0.015 240);  /* Logicwind Blue text on blue grey */
   
-  /* Light backgrounds for muted elements */
-  --muted: oklch(0.96 0.02 85);                   /* Light Beige */
-  --muted-foreground: oklch(0.556 0 0);           /* Medium gray text */
+  /* Neutral Grey for muted elements */
+  --muted: oklch(0.88 0.02 250);                  /* Blue Grey for muted backgrounds */
+  --muted-foreground: oklch(0.42 0.02 250);       /* Neutral Grey text (#585E75) */
   
-  /* Deep Navy as accent */
-  --accent: oklch(0.25 0.05 220);                 /* Deep Navy (#0B3B4D) */
-  --accent-foreground: oklch(0.985 0 0);          /* White text on navy */
+  /* Logicwind Blue as accent */
+  --accent: oklch(0.11 0.015 240);                /* Logicwind Blue (#0E151E) */
+  --accent-foreground: oklch(1 0 0);              /* White text on blue */
   
   /* Standard destructive */
   --destructive: oklch(0.577 0.245 27.325);       /* Red for errors */
   --destructive-foreground: oklch(0.985 0 0);     /* White text on red */
   
   /* Borders and inputs */
-  --border: oklch(0.922 0 0);                     /* Light gray borders */
-  --input: oklch(0.922 0 0);                      /* Light gray input borders */
-  --ring: oklch(0.85 0.2 102);                    /* Hero Lime focus ring */
+  --border: oklch(0.42 0.02 250);                 /* Neutral Grey borders */
+  --input: oklch(0.42 0.02 250);                  /* Neutral Grey input borders */
+  --ring: oklch(0.59 0.22 15);                    /* Logicwind Red focus ring */
   
   /* Chart colors using brand palette variations */
-  --chart-1: oklch(0.85 0.2 102);                 /* Hero Lime */
-  --chart-2: oklch(0.25 0.05 220);                /* Deep Navy */
-  --chart-3: oklch(0.96 0.02 85);                 /* Light Beige */
-  --chart-4: oklch(0.7 0.15 102);                 /* Darker Lime */
-  --chart-5: oklch(0.35 0.08 220);                /* Lighter Navy */
+  --chart-1: oklch(0.59 0.22 15);                 /* Logicwind Red */
+  --chart-2: oklch(0.11 0.015 240);               /* Logicwind Blue */
+  --chart-3: oklch(0.88 0.02 250);                /* Blue Grey */
+  --chart-4: oklch(0.42 0.02 250);                /* Neutral Grey */
+  --chart-5: oklch(0.75 0.18 15);                 /* Lighter Red variant */
   
   /* Sidebar using brand colors */
-  --sidebar: oklch(0.985 0 0);                    /* Light sidebar */
-  --sidebar-foreground: oklch(0.145 0 0);         /* Dark text */
-  --sidebar-primary: oklch(0.85 0.2 102);         /* Hero Lime */
-  --sidebar-primary-foreground: oklch(0.145 0 0); /* Dark text on lime */
-  --sidebar-accent: oklch(0.96 0.02 85);          /* Light Beige */
-  --sidebar-accent-foreground: oklch(0.145 0 0);  /* Dark text on beige */
-  --sidebar-border: oklch(0.922 0 0);             /* Light borders */
-  --sidebar-ring: oklch(0.85 0.2 102);            /* Hero Lime focus */
+  --sidebar: oklch(1 0 0);                        /* White sidebar */
+  --sidebar-foreground: oklch(0.11 0.015 240);    /* Logicwind Blue text */
+  --sidebar-primary: oklch(0.59 0.22 15);         /* Logicwind Red */
+  --sidebar-primary-foreground: oklch(1 0 0);     /* White text on red */
+  --sidebar-accent: oklch(0.88 0.02 250);         /* Blue Grey */
+  --sidebar-accent-foreground: oklch(0.11 0.015 240); /* Logicwind Blue text */
+  --sidebar-border: oklch(0.42 0.02 250);         /* Neutral Grey borders */
+  --sidebar-ring: oklch(0.59 0.22 15);            /* Logicwind Red focus */
 }
 
 @theme inline {
@@ -74,6 +80,12 @@
   --color-light-beige: var(--light-beige);
   --color-pure-white: var(--pure-white);
   --color-black: var(--black);
+  
+  /* Legacy brand colors */
+  --color-logicwind-blue: var(--logicwind-blue);
+  --color-logicwind-red: var(--logicwind-red);
+  --color-blue-grey: var(--blue-grey);
+  --color-neutral-grey: var(--neutral-grey);
 
   /* Legacy support */
   --color-background: var(--background);
@@ -123,66 +135,83 @@ body {
 }
 
 /* Utility classes for brand colors */
+/* New Logicwind Brand Colors */
 .bg-hero-lime { background-color: var(--hero-lime); }
 .bg-deep-navy { background-color: var(--deep-navy); }
 .bg-light-beige { background-color: var(--light-beige); }
 .text-hero-lime { color: var(--hero-lime); }
 .text-deep-navy { color: var(--deep-navy); }
+.text-light-beige { color: var(--light-beige); }
 .border-hero-lime { border-color: var(--hero-lime); }
 .border-deep-navy { border-color: var(--deep-navy); }
+.border-light-beige { border-color: var(--light-beige); }
+
+/* Legacy brand colors (kept for compatibility) */
+.bg-logicwind-blue { background-color: var(--logicwind-blue); }
+.bg-logicwind-red { background-color: var(--logicwind-red); }
+.bg-blue-grey { background-color: var(--blue-grey); }
+.bg-neutral-grey { background-color: var(--neutral-grey); }
+.text-logicwind-blue { color: var(--logicwind-blue); }
+.text-logicwind-red { color: var(--logicwind-red); }
+.text-blue-grey { color: var(--blue-grey); }
+.text-neutral-grey { color: var(--neutral-grey); }
+.border-logicwind-blue { border-color: var(--logicwind-blue); }
+.border-logicwind-red { border-color: var(--logicwind-red); }
+.border-blue-grey { border-color: var(--blue-grey); }
+.border-neutral-grey { border-color: var(--neutral-grey); }
 
 .dark {
-  /* Dark theme using Logicwind brand colors with improved accessibility */
-  --background: oklch(0.08 0.003 240);                /* Darker background for better contrast */
-  --foreground: oklch(0.98 0 0);                      /* Pure white text */
+  /* Dark theme using Logicwind Blue as base */
+  --background: oklch(0.11 0.015 240);                /* Logicwind Blue background */
+  --foreground: oklch(1 0 0);                         /* Pure white text */
   
-  --card: oklch(0.16 0.04 220);                       /* Darker cards with better contrast */
-  --card-foreground: oklch(0.96 0 0);                 /* Slightly softer white text */
+  --card: oklch(0.18 0.02 240);                       /* Slightly lighter blue for cards */
+  --card-foreground: oklch(1 0 0);                    /* White text on cards */
   
-  --popover: oklch(0.16 0.04 220);                    /* Darker popovers matching cards */
-  --popover-foreground: oklch(0.96 0 0);              /* Slightly softer white text */
+  --popover: oklch(0.18 0.02 240);                    /* Slightly lighter blue for popovers */
+  --popover-foreground: oklch(1 0 0);                 /* White text in popovers */
   
-  /* Enhanced Hero Lime for dark mode visibility */
-  --primary: oklch(0.91 0.25 102);                    /* Even brighter lime for better contrast */
-  --primary-foreground: oklch(0.08 0 0);              /* Very dark text on lime */
+  /* Logicwind Red remains primary accent */
+  --primary: oklch(0.59 0.22 15);                     /* Logicwind Red */
+  --primary-foreground: oklch(1 0 0);                 /* White text on red */
   
-  /* Improved secondary using navy variant */
-  --secondary: oklch(0.20 0.04 220);                  /* Subtle navy background */
-  --secondary-foreground: oklch(0.94 0 0);            /* High contrast white text */
+  /* Blue Grey for secondary elements */
+  --secondary: oklch(0.25 0.02 240);                  /* Darker blue for secondary */
+  --secondary-foreground: oklch(0.88 0.02 250);       /* Blue Grey text */
   
-  /* Enhanced muted elements with better readability */
-  --muted: oklch(0.18 0.03 220);                      /* Darker muted background */
-  --muted-foreground: oklch(0.82 0 0);                /* Much better contrast muted text */
+  /* Enhanced muted elements with Blue Grey */
+  --muted: oklch(0.22 0.02 240);                      /* Darker blue muted background */
+  --muted-foreground: oklch(0.88 0.02 250);           /* Blue Grey muted text */
   
-  /* Accent with improved contrast */
-  --accent: oklch(0.28 0.06 220);                     /* Better contrast accent */
-  --accent-foreground: oklch(0.98 0 0);               /* Higher contrast white text */
+  /* Neutral Grey accent */
+  --accent: oklch(0.42 0.02 250);                     /* Neutral Grey accent */
+  --accent-foreground: oklch(1 0 0);                  /* White text on grey */
   
   /* Destructive with better visibility */
   --destructive: oklch(0.65 0.25 25);                 /* More visible red */
   --destructive-foreground: oklch(0.98 0 0);          /* High contrast white text */
   
-  /* Enhanced borders and inputs for better visibility */
-  --border: oklch(0.3 0.02 220);                      /* More visible borders */
-  --input: oklch(0.24 0.03 220);                      /* Better visible input fields */
-  --ring: oklch(0.91 0.25 102);                       /* Bright lime focus ring */
+  /* Enhanced borders and inputs for dark mode */
+  --border: oklch(0.42 0.02 250);                     /* Neutral Grey borders */
+  --input: oklch(0.42 0.02 250);                      /* Neutral Grey input borders */
+  --ring: oklch(0.59 0.22 15);                        /* Logicwind Red focus ring */
   
-  /* Optimized chart colors for dark mode */
-  --chart-1: oklch(0.91 0.25 102);                    /* Bright Hero Lime */
-  --chart-2: oklch(0.45 0.10 220);                    /* Mid Navy */
-  --chart-3: oklch(0.65 0.08 85);                     /* Readable Beige */
-  --chart-4: oklch(0.85 0.20 108);                    /* Lime variant */
-  --chart-5: oklch(0.55 0.12 220);                    /* Light Navy */
+  /* Updated chart colors for dark mode */
+  --chart-1: oklch(0.59 0.22 15);                     /* Logicwind Red */
+  --chart-2: oklch(0.88 0.02 250);                    /* Blue Grey */
+  --chart-3: oklch(0.42 0.02 250);                    /* Neutral Grey */
+  --chart-4: oklch(0.75 0.18 15);                     /* Lighter Red variant */
+  --chart-5: oklch(0.25 0.02 240);                    /* Darker Blue */
   
-  /* Enhanced sidebar with improved contrast */
-  --sidebar: oklch(0.14 0.03 220);                    /* Darker sidebar background */
-  --sidebar-foreground: oklch(0.94 0 0);              /* High contrast text */
-  --sidebar-primary: oklch(0.91 0.25 102);            /* Bright Hero Lime */
-  --sidebar-primary-foreground: oklch(0.08 0 0);      /* Very dark text on lime */
-  --sidebar-accent: oklch(0.28 0.06 220);             /* Better contrast accent */
-  --sidebar-accent-foreground: oklch(0.94 0 0);       /* High contrast text */
-  --sidebar-border: oklch(0.3 0.02 220);              /* More visible borders */
-  --sidebar-ring: oklch(0.91 0.25 102);               /* Bright lime focus */
+  /* Enhanced sidebar for dark mode */
+  --sidebar: oklch(0.18 0.02 240);                    /* Slightly lighter blue sidebar */
+  --sidebar-foreground: oklch(1 0 0);                 /* White text */
+  --sidebar-primary: oklch(0.59 0.22 15);             /* Logicwind Red */
+  --sidebar-primary-foreground: oklch(1 0 0);         /* White text on red */
+  --sidebar-accent: oklch(0.42 0.02 250);             /* Neutral Grey accent */
+  --sidebar-accent-foreground: oklch(1 0 0);          /* White text on grey */
+  --sidebar-border: oklch(0.42 0.02 250);             /* Neutral Grey borders */
+  --sidebar-ring: oklch(0.59 0.22 15);                /* Logicwind Red focus */
 }
 
 @layer base {

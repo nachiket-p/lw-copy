@@ -18,25 +18,18 @@ import {
 
 const brandColors = [
   {
-    name: "Hero Lime",
-    color: "#D4F620",
+    name: "Logicwind Blue",
+    color: "#0E151E",
+    description: "Primary brand color",
+    icon: Shield,
+    usage: "Backgrounds & text"
+  },
+  {
+    name: "Logicwind Red",
+    color: "#F04F4B",
     description: "Primary accent color",
     icon: Zap,
     usage: "CTAs & highlights"
-  },
-  {
-    name: "Deep Navy",
-    color: "#0B3B4D",
-    description: "Dark sections & premium",
-    icon: Shield,
-    usage: "Community & premium"
-  },
-  {
-    name: "Light Beige",
-    color: "#F5F0E8",
-    description: "Neutral backgrounds",
-    icon: Home,
-    usage: "Subtle backgrounds"
   },
   {
     name: "Pure White",
@@ -46,11 +39,18 @@ const brandColors = [
     usage: "Cards & content"
   },
   {
-    name: "Pure Black",
-    color: "#000000",
-    description: "Primary text",
+    name: "Blue Grey",
+    color: "#D2D6E5",
+    description: "Secondary text",
     icon: Type,
-    usage: "Typography"
+    usage: "Secondary content"
+  },
+  {
+    name: "Neutral Grey",
+    color: "#585E75",
+    description: "Neutral elements",
+    icon: Home,
+    usage: "Borders & muted text"
   }
 ]
 
@@ -72,10 +72,10 @@ export function ColorPaletteSection() {
             </h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              {/* Hero Lime Examples */}
+              {/* Logicwind Red Examples */}
               <ColorUsageExample
-                title="Hero Lime Usage"
-                description="Primary actions & achievements"
+                title="Logicwind Red Usage"
+                description="Primary actions & highlights"
                 icon={Zap}
                 examples={[
                   {
@@ -101,43 +101,43 @@ export function ColorPaletteSection() {
                 ]}
               />
 
-              {/* Deep Navy Examples */}
+              {/* Logicwind Blue Examples */}
               <ColorUsageExample
-                title="Deep Navy Usage"
-                description="Dark sections & community"
+                title="Logicwind Blue Usage"
+                description="Primary backgrounds & text"
                 icon={Shield}
                 examples={[
                   {
                     component: (
                       <Card className="bg-accent text-accent-foreground p-6">
                         <div className="flex items-center justify-between mb-2">
-                          <h5 className="font-semibold">Premium Section</h5>
+                          <h5 className="font-semibold">Primary Section</h5>
                           <Users className="w-4 h-4" />
                         </div>
-                        <p className="text-sm opacity-90">Community content</p>
+                        <p className="text-sm opacity-90">Brand content areas</p>
                       </Card>
                     ),
-                    description: "Premium and community sections"
+                    description: "Primary brand sections"
                   }
                 ]}
               />
 
-              {/* Light Beige Examples */}
+              {/* Blue Grey Examples */}
               <ColorUsageExample
-                title="Light Beige Usage"
-                description="Subtle backgrounds & cards"
-                icon={Home}
+                title="Blue Grey Usage"
+                description="Secondary text & backgrounds"
+                icon={Type}
                 examples={[
                   {
                     component: (
                       <Card className="bg-secondary text-secondary-foreground p-6">
                         <div className="flex items-center justify-between">
-                          <span>Neutral content</span>
+                          <span>Secondary content</span>
                           <Calendar className="w-4 h-4 text-muted-foreground" />
                         </div>
                       </Card>
                     ),
-                    description: "Neutral content areas"
+                    description: "Secondary content areas"
                   }
                 ]}
               />
