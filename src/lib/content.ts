@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkHtml from 'remark-html';
 import remarkGfm from 'remark-gfm';
-import { unified } from 'unified';
+// import { unified } from 'unified'; // Currently unused
 
 // Types for content structure
 export interface PageContent {
@@ -12,7 +12,7 @@ export interface PageContent {
     title: string;
     description?: string;
     lastUpdated?: string;
-    [key: string]: any;
+    [key: string]: unknown;
   };
   sections: Record<string, string>;
   rawContent: string;
@@ -20,7 +20,7 @@ export interface PageContent {
 
 export interface CommonContent {
   frontmatter: {
-    [key: string]: any;
+    [key: string]: unknown;
   };
   content: string;
 }

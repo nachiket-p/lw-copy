@@ -2,7 +2,9 @@ import { RiskMitigationContent } from "../../../content/types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import * as Icons from "lucide-react";
 
-interface RiskMitigationProps extends RiskMitigationContent {}
+interface RiskMitigationProps extends RiskMitigationContent {
+  // This interface extends RiskMitigationContent with any additional props if needed
+}
 
 export function RiskMitigation({ title, guarantees }: RiskMitigationProps) {
   return (
@@ -16,7 +18,7 @@ export function RiskMitigation({ title, guarantees }: RiskMitigationProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {guarantees.map((guarantee, index) => {
-            const IconComponent = Icons[guarantee.icon as keyof typeof Icons] as React.ComponentType<any>;
+            const IconComponent = Icons[guarantee.icon as keyof typeof Icons] as React.ComponentType<{ className?: string }>;
             
             return (
               <Card key={index} className="h-full">

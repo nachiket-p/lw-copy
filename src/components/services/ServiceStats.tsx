@@ -1,7 +1,9 @@
 import { ServiceStatsContent } from "../../../content/types";
 import { Card, CardContent } from "@/components/ui/card";
 
-interface ServiceStatsProps extends ServiceStatsContent {}
+interface ServiceStatsProps extends ServiceStatsContent {
+  // This interface extends ServiceStatsContent with any additional props if needed
+}
 
 export function ServiceStats({ title, metrics, layout }: ServiceStatsProps) {
   const layoutClasses = {

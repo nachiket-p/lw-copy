@@ -2,7 +2,9 @@ import { ServiceComparisonContent } from "../../../content/types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, X } from "lucide-react";
 
-interface ServiceComparisonProps extends ServiceComparisonContent {}
+interface ServiceComparisonProps extends ServiceComparisonContent {
+  // This interface extends ServiceComparisonContent with any additional props if needed
+}
 
 export function ServiceComparison({ title, subtitle, comparison, layout }: ServiceComparisonProps) {
   if (layout === "side-by-side") {

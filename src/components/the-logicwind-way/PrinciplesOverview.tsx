@@ -15,7 +15,7 @@ export function PrinciplesOverview({ principles }: PrinciplesOverviewProps) {
             Our Core Principles
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Four foundational commitments that ensure our AI solutions serve humanity's best interests
+            Four foundational commitments that ensure our AI solutions serve humanity&apos;s best interests
           </p>
         </div>
 

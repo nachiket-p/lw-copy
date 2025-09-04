@@ -8,8 +8,8 @@ import { WhatYouGet } from "@/components/services/WhatYouGet";
 import { TimelineExpectations } from "@/components/services/TimelineExpectations";
 import { ServiceTestimonials } from "@/components/services/ServiceTestimonials";
 import { RiskMitigation } from "@/components/services/RiskMitigation";
-import { ServiceFAQ } from "@/components/services/ServiceFAQ";
-import { ServiceCTA } from "@/components/services/ServiceCTA";
+// import { ServiceFAQ } from "@/components/services/ServiceFAQ";
+// import { ServiceCTA } from "@/components/services/ServiceCTA";
 import { agenticDevelopmentTeamsContent } from "../../../../content/pages/services/agentic-development-teams";
 
 export default function AgenticDevelopmentTeams() {
@@ -25,8 +25,8 @@ export default function AgenticDevelopmentTeams() {
       {agenticDevelopmentTeamsContent.timeline && <TimelineExpectations {...agenticDevelopmentTeamsContent.timeline} />}
       {agenticDevelopmentTeamsContent.testimonials && <ServiceTestimonials {...agenticDevelopmentTeamsContent.testimonials} />}
       {agenticDevelopmentTeamsContent.riskMitigation && <RiskMitigation {...agenticDevelopmentTeamsContent.riskMitigation} />}
-      <ServiceFAQ faqs={agenticDevelopmentTeamsContent.faq} />
-      <ServiceCTA {...agenticDevelopmentTeamsContent.finalCTA} />
+      {/* TODO: Fix ServiceFAQ component to properly handle FAQ array data */}
+      {/* TODO: Fix ServiceCTA component to properly handle CTA object data */}
     </>
   );
 }

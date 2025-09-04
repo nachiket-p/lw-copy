@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 
-interface PricingOverviewProps extends PricingOverviewContent {}
+interface PricingOverviewProps extends PricingOverviewContent {
+  // This interface extends PricingOverviewContent with any additional props if needed
+}
 
 export function PricingOverview({ title, subtitle, packages, fixedPrice, layout }: PricingOverviewProps) {
   if (layout === "simple" && fixedPrice) {

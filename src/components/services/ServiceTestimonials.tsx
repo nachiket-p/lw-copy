@@ -4,7 +4,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Quote } from "lucide-react";
 
-interface ServiceTestimonialsProps extends ServiceTestimonialsContent {}
+interface ServiceTestimonialsProps extends ServiceTestimonialsContent {
+  // This interface extends ServiceTestimonialsContent with any additional props if needed
+}
 
 export function ServiceTestimonials({ title, testimonials, display }: ServiceTestimonialsProps) {
   if (display === "single" && testimonials.length > 0) {
@@ -23,7 +25,7 @@ export function ServiceTestimonials({ title, testimonials, display }: ServiceTes
               <CardContent className="p-8">
                 <Quote className="w-12 h-12 text-logicwind-red mx-auto mb-6" />
                 <blockquote className="text-xl md:text-2xl text-deep-navy mb-6 font-medium leading-relaxed">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
                 <div className="flex items-center justify-center gap-4">
                   <Avatar className="w-12 h-12">
@@ -77,7 +79,7 @@ export function ServiceTestimonials({ title, testimonials, display }: ServiceTes
                     <div className="pt-4 pl-14">
                       <Quote className="w-8 h-8 text-logicwind-red mb-4" />
                       <blockquote className="text-lg text-deep-navy leading-relaxed">
-                        "{testimonial.quote}"
+                        &ldquo;{testimonial.quote}&rdquo;
                       </blockquote>
                     </div>
                   </AccordionContent>
@@ -106,7 +108,7 @@ export function ServiceTestimonials({ title, testimonials, display }: ServiceTes
                 <CardContent className="p-6 flex flex-col h-full">
                   <Quote className="w-8 h-8 text-logicwind-red mb-4" />
                   <blockquote className="text-deep-navy mb-6 flex-grow">
-                    "{testimonial.quote}"
+                    &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   <div className="flex items-center gap-3">
                     <Avatar className="w-10 h-10">
@@ -146,7 +148,7 @@ export function ServiceTestimonials({ title, testimonials, display }: ServiceTes
                   <CardContent className="p-6">
                     <Quote className="w-8 h-8 text-logicwind-red mb-4" />
                     <blockquote className="text-deep-navy mb-6">
-                      "{testimonial.quote}"
+                      &ldquo;{testimonial.quote}&rdquo;
                     </blockquote>
                     <div className="flex items-center gap-3">
                       <Avatar className="w-10 h-10">

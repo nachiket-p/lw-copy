@@ -3,7 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 
-interface ServiceTeamProps extends ServiceTeamContent {}
+interface ServiceTeamProps extends ServiceTeamContent {
+  // This interface extends ServiceTeamContent with any additional props if needed
+}
 
 export function ServiceTeam({ title, subtitle, members, structure }: ServiceTeamProps) {
   if (structure === "individuals") {

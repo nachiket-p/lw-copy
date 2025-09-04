@@ -3,7 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, CheckCircle } from "lucide-react";
 
-interface TimelineExpectationsProps extends TimelineExpectationsContent {}
+interface TimelineExpectationsProps extends TimelineExpectationsContent {
+  // This interface extends TimelineExpectationsContent with any additional props if needed
+}
 
 export function TimelineExpectations({ title, phases, totalDuration, display }: TimelineExpectationsProps) {
   if (display === "linear") {

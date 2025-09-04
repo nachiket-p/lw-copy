@@ -4,7 +4,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check } from "lucide-react";
 
-interface TechnicalSpecsProps extends TechnicalSpecsContent {}
+interface TechnicalSpecsProps extends TechnicalSpecsContent {
+  // This interface extends TechnicalSpecsContent with any additional props if needed
+}
 
 export function TechnicalSpecs({ title, sections, format }: TechnicalSpecsProps) {
   if (format === "tabs") {

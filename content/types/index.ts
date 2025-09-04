@@ -416,3 +416,36 @@ export interface ContactPageContent {
     }>;
   };
 }
+
+// Common contact info interface
+export interface ContactContent {
+  email: string;
+  phone: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  };
+  businessHours: Array<{
+    day: string;
+    hours: string;
+  }>;
+  ctaOptions: {
+    primary: string;
+    secondary: string;
+    consultation: string;
+    quote: string;
+  };
+  formLabels: {
+    name: string;
+    email: string;
+    company: string;
+    message: string;
+    serviceInterest: string;
+    budgetRange: string;
+    timeline: string;
+    submit: string;
+  };
+}
