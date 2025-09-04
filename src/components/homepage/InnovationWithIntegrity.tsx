@@ -1,16 +1,23 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Shield, Heart, Eye, Users } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
+import * as Icons from "lucide-react";
+import type { InnovationWithIntegrityContent } from "@/content/types";
 
-export function InnovationWithIntegrity() {
+interface InnovationWithIntegrityProps {
+  content: InnovationWithIntegrityContent;
+}
+
+export function InnovationWithIntegrity({ content }: InnovationWithIntegrityProps) {
+
   return (
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-              Our Principles, Your Peace of Mind
+              {content.headline}
             </h2>
           </div>
 
@@ -27,40 +34,28 @@ export function InnovationWithIntegrity() {
               </div>
 
               <blockquote className="text-2xl md:text-3xl font-semibold text-center mb-8 leading-relaxed italic">
-                &ldquo;We believe true innovation demands responsibility. Our agentic frameworks are built 
-                on a foundation of transparency, ethics, and human-centric design.&rdquo;
+                &ldquo;{content.quote}&rdquo;
               </blockquote>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Eye className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-semibold mb-2">Transparency</h4>
-                  <p className="text-sm opacity-90">No black boxes. You always know how our systems work.</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Heart className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-semibold mb-2">Ethics</h4>
-                  <p className="text-sm opacity-90">Every decision guided by strong moral principles.</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-semibold mb-2">Human-Centric</h4>
-                  <p className="text-sm opacity-90">Technology that empowers people, not replaces them.</p>
-                </div>
+                {content.principles.map((principle: { icon: string; title: string; description: string }, index: number) => {
+                  const IconComponent = Icons[principle.icon as keyof typeof Icons] as React.ComponentType<{ className?: string }>;
+                  return (
+                    <div key={index} className="text-center">
+                      <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <IconComponent className="w-6 h-6" />
+                      </div>
+                      <h4 className="font-semibold mb-2">{principle.title}</h4>
+                      <p className="text-sm opacity-90">{principle.description}</p>
+                    </div>
+                  );
+                })}
               </div>
 
               <div className="text-center">
                 <Button asChild variant="secondary" size="lg" className="bg-white text-accent hover:bg-white/90">
-                  <Link href="/the-logicwind-way/responsible-ai">
-                    Explore Our Principles
+                  <Link href={content.cta.href}>
+                    {content.cta.text}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>

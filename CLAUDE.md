@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Logicwind Design System** built with Next.js 15, React 19, TypeScript, and Tailwind CSS. The project serves as a comprehensive design system documentation and component library showcasing all key design elements, components, and patterns for the Logicwind brand.
+This is the **Logicwind Website** built with Next.js 15, React 19, TypeScript, and Tailwind CSS. The project serves as a comprehensive business website for Logicwind, "The Principled Pioneer" in Agentic Development, showcasing services, company values, and thought leadership in AI and responsible technology.
 
 ## Development Commands
 
@@ -20,85 +20,136 @@ npm run lint         # Run ESLint
 
 ## Architecture & Structure
 
-### Core Design System Architecture
-The design system is implemented as a single comprehensive page (`src/app/page.tsx`) that demonstrates all components in a documentation-style layout:
+### Website Architecture
+The website follows a multi-page Next.js application structure with the following key sections:
 
-1. **Color Palette Section** - Interactive color swatches with click-to-copy functionality
-2. **Typography System** - Complete hierarchy from headings to UI labels
-3. **Component Library** - Buttons, cards, forms, and interactive elements
-4. **Usage Examples** - Live demonstrations of each component variant
+**Core Pages:**
+- **Homepage** (`src/app/page.tsx`) - Sectioned homepage with hero, social proof, problem/solution, services, principles, success stories, and CTA
+- **Services Pages** - Individual service pages using a consistent template structure
+- **The Logicwind Way** - Company approach and principles pages
+- **Contact Page** - Contact form and company information
+- **Style Guide** (`src/app/style-guide/page.tsx`) - Design system documentation
 
-### Brand Identity (Logicwind)
-The design system is built around the Logicwind brand specifications found in `ai-docs/brand-design-specs.md`:
+**Site Navigation Structure:**
+- Home
+- Services (Dropdown: AI Advantage Sprint, Agentic MVP Development, Intelligent ERP Solutions, Agentic Development Teams)
+- The Logicwind Way (Agentic Development, Responsible AI)
+- Contact
+- Style Guide (Internal design reference)
 
-**Primary Colors:**
-- Hero Lime: `#D4F620` (primary accent, pill buttons, score cards)
-- Deep Navy: `#0B3B4D` (dark sections, community cards)
+### Component Architecture
+The website uses a modular component structure organized into logical folders:
+
+**UI Components** (`src/components/ui/`):
+- Base UI primitives using Radix UI and custom styling
+- Button, Card, Input, Label, Select, Textarea, Form components
+- Navigation Menu, Accordion, Tooltip, Dropdown Menu, Tabs
+- Theme Toggle and other interactive elements
+
+**Page Sections** (`src/components/homepage/`, `src/components/services/`, etc.):
+- Homepage sections: HeroSection, SocialProofBar, ProblemSolutionSection, ServicesOverview, etc.
+- Service page sections: ServiceHero, IsThisForYou, HowItWorks, WhatYouGet, etc.
+- Contact components: ContactForm, ContactInfo
+
+**Layout Components** (`src/components/layout/`):
+- Header with navigation
+- Footer with secondary navigation and links
+
+**Custom Components** (`src/components/custom/`):
+- MetricCard, ColorSwatch, ComponentShowcase for specialized functionality
+
+### Brand Identity & Messaging
+The website reflects Logicwind's "Principled Pioneer" brand identity with key messaging:
+
+**Core Brand Elements:**
+- **Tagline:** "The Agentic Advantage. Responsibly Delivered."
+- **Positioning:** The principled pioneer in agentic development
+- **Services:** AI Advantage Sprint, Agentic MVP Development, Intelligent ERP Solutions, Agentic Development Teams
+
+**Brand Colors:**
+- Hero Lime: `#D4F620` (primary accent for CTAs)
+- Deep Navy: `#0B3B4D` (dark sections, professional tone)
+- Logicwind Red: `#F04F4B` (legacy primary, used in theme system)
+- Logicwind Blue: `#0E151E` (legacy dark, used in theme system)
 - Pure White: `#FFFFFF` (backgrounds, text on dark)
 - Light Beige: `#F5F0E8` (neutral backgrounds)
-- Black: `#000000` (primary text)
 
-**Key Design Patterns:**
-- Pill-shaped primary buttons with uppercase text
-- Rounded cards (16-20px radius) with subtle shadows
-- Score/progress cards with lime backgrounds
-- Dark navy sections for community content
-- Clean form inputs with minimal design
-
-### CSS Architecture
+### CSS & Styling Architecture
 **Global Styles (`src/app/globals.css`):**
-- CSS custom properties for brand colors
-- Tailwind integration with `@import "tailwindcss"`
-- Brand-specific utility classes (`.bg-hero-lime`, `.text-deep-navy`, etc.)
+- Comprehensive CSS custom properties for both new brand colors and legacy compatibility
+- Tailwind CSS v4 integration with `@import "tailwindcss"`
+- Custom theme system with light/dark mode support
+- Brand-specific utility classes for both color palettes
 
-**Component Styling:**
-- Uses Tailwind utility classes throughout
-- Inline styles for exact brand colors (`style={{backgroundColor: '#D4F620'}}`)
+**Styling Approach:**
+- Tailwind utility-first methodology throughout all components
+- Radix UI primitives with custom styling via class-variance-authority
 - Responsive design with mobile-first approach
+- Theme switching capability with ThemeContext
 
-### Client-Side Interactivity
-**Important:** This is a Client Component (`"use client"` directive) because it includes:
-- Click handlers for color copying functionality
-- Interactive form elements
-- Hover states and transitions
+**Key Styling Libraries:**
+- `tailwindcss` v4 - Utility-first CSS framework
+- `class-variance-authority` - Composable utility classes for components
+- `tailwind-merge` - Utility for merging Tailwind classes
+- `clsx` - Conditional class names utility
 
-### Reference Materials
-The design system is based on a fitness website design reference (`ai-docs/Fitness Website Design by Levi Wilson.webp`) which provides visual examples of:
-- Hero sections with large background images
-- Score cards with user metrics (87% fitness scores)
-- Split-screen layouts (content + image)
-- Community sections with dark backgrounds
-- Newsletter signup patterns
+### State Management & Context
+**ThemeContext** (`src/contexts/ThemeContext.tsx`):
+- Light/dark theme switching functionality
+- Theme persistence across page loads
+- Global theme state management for all components
 
 ## Development Guidelines
 
-### Adding New Components
-1. Follow the existing pattern structure in `page.tsx`
-2. Use the established brand colors from CSS custom properties
-3. Maintain responsive design patterns
-4. Include usage examples and code snippets
-5. Use proper semantic HTML and accessibility attributes
+### Adding New Pages
+1. Create page files in appropriate `src/app/` directory structure
+2. Follow the established component pattern (services pages use consistent template structure)
+3. Import and compose page-specific components from their respective folders
+4. Maintain consistent layout with Header and Footer from layout components
 
-### Color Usage
-- Hero Lime (`#D4F620`): Primary CTAs, score cards, accent elements
-- Deep Navy (`#0B3B4D`): Dark sections, community content, footer areas
-- Light Beige (`#F5F0E8`): Subtle backgrounds, neutral content areas
-- Always test contrast ratios for accessibility
+### Component Development
+1. Use the modular component structure - organize by purpose (ui/, homepage/, services/, layout/, etc.)
+2. Follow Radix UI patterns for complex interactive components
+3. Leverage class-variance-authority for component variants
+4. Use TypeScript for all component props and type safety
 
-### Typography Patterns
-- Headings: Bold weights, generous line spacing
-- Labels: Uppercase, tracking-wide, small sizes
-- UI Text: Medium weights for personalized messages
-- Button Text: Uppercase, semibold, letter spacing
+### Content & Messaging Guidelines
+- Follow the "Principled Pioneer" brand voice: confident, visionary, clear, direct
+- Reference `ai-docs/logicwind-website-specs.md` for official copy and messaging
+- Core services: AI Advantage Sprint, Agentic MVP Development, Intelligent ERP Solutions, Agentic Development Teams
+- Maintain consistency with the "Agentic Advantage. Responsibly Delivered." tagline
 
-### Form Elements
-- Clean inputs with subtle borders (`border-gray-200`)
-- Focus states change border to black
-- Small uppercase labels above inputs
-- Validation states with colored borders and helper text
+### Brand Color Usage
+- **Hero Lime** (`#D4F620`): Primary CTAs, accent highlights, key interactive elements
+- **Deep Navy** (`#0B3B4D`): Dark sections, professional content areas, contrast backgrounds
+- **Logicwind Red/Blue**: Legacy colors maintained in theme system for compatibility
+- Always use CSS custom properties or Tailwind utility classes rather than hardcoded hex values
+
+### Form Implementation
+- Use React Hook Form with Zod validation for all forms
+- Implement proper form accessibility with labels and ARIA attributes
+- Follow the contact form pattern for consistent styling and UX
 
 ### ESLint Considerations
 - Use `&apos;` for apostrophes in JSX content to avoid ESLint warnings
 - Use `defaultValue` and `defaultChecked` for form inputs instead of `value` and `checked`
 
-This design system serves as both documentation and a living example of the Logicwind brand implementation, providing a foundation for consistent UI development across all Logicwind products.
+## Project Dependencies
+
+### Core Framework
+- **Next.js 15** with React 19 - Latest Next.js with React Server Components
+- **TypeScript** - Full type safety throughout the application
+- **Tailwind CSS v4** - Latest utility-first CSS framework
+
+### UI Library Stack
+- **Radix UI** - Accessible, unstyled UI primitives (@radix-ui/react-*)
+- **Lucide React** - Icon library for consistent iconography
+- **class-variance-authority** - Type-safe component variants
+- **clsx** & **tailwind-merge** - Conditional and merged class utilities
+
+### Form Handling
+- **React Hook Form** - Performant, flexible forms with validation
+- **@hookform/resolvers** - Validation resolvers for React Hook Form
+- **Zod** - TypeScript-first schema validation
+
+This website serves as the digital presence for Logicwind's "Principled Pioneer" brand, showcasing agentic development services and responsible AI principles through a modern, performant web experience.

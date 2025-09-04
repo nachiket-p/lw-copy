@@ -31,7 +31,11 @@ const faqs = [
   }
 ];
 
-export function ServiceFAQ() {
+interface ServiceFAQProps {
+  content: string;
+}
+
+export function ServiceFAQ({ content }: ServiceFAQProps) {
   return (
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-4">

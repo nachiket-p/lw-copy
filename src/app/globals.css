@@ -1,99 +1,37 @@
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  /* Logicwind Brand Colors */
-  --hero-lime: #D4F620;
-  --deep-navy: #0B3B4D;
-  --pure-white: #FFFFFF;
-  --light-beige: #F5F0E8;
-  --black: #000000;
-  
-  /* Legacy colors (kept for compatibility) */
-  --logicwind-blue: #0E151E;
-  --logicwind-red: #F04F4B;
-  --blue-grey: #D2D6E5;
-  --neutral-grey: #585E75;
-
-  /* Border radius */
-  --radius: 0.625rem;
-
-  /* Logicwind Theme Integration */
-  --background: oklch(1 0 0);                      /* Pure white background */
-  --foreground: oklch(0.11 0.015 240);             /* Logicwind Blue text (#0E151E) */
-  
-  --card: oklch(1 0 0);                           /* White cards */
-  --card-foreground: oklch(0.11 0.015 240);       /* Logicwind Blue text on cards */
-  
-  --popover: oklch(1 0 0);                        /* White popovers */
-  --popover-foreground: oklch(0.11 0.015 240);    /* Logicwind Blue text in popovers */
-  
-  /* Logicwind Red as primary accent */
-  --primary: oklch(0.59 0.22 15);                 /* Logicwind Red (#F04F4B) */
-  --primary-foreground: oklch(1 0 0);             /* White text on red */
-  
-  /* Blue Grey as secondary */
-  --secondary: oklch(0.88 0.02 250);              /* Blue Grey (#D2D6E5) */
-  --secondary-foreground: oklch(0.11 0.015 240);  /* Logicwind Blue text on blue grey */
-  
-  /* Neutral Grey for muted elements */
-  --muted: oklch(0.88 0.02 250);                  /* Blue Grey for muted backgrounds */
-  --muted-foreground: oklch(0.42 0.02 250);       /* Neutral Grey text (#585E75) */
-  
-  /* Logicwind Blue as accent */
-  --accent: oklch(0.11 0.015 240);                /* Logicwind Blue (#0E151E) */
-  --accent-foreground: oklch(1 0 0);              /* White text on blue */
-  
-  /* Standard destructive */
-  --destructive: oklch(0.577 0.245 27.325);       /* Red for errors */
-  --destructive-foreground: oklch(0.985 0 0);     /* White text on red */
-  
-  /* Borders and inputs */
-  --border: oklch(0.42 0.02 250);                 /* Neutral Grey borders */
-  --input: oklch(0.42 0.02 250);                  /* Neutral Grey input borders */
-  --ring: oklch(0.59 0.22 15);                    /* Logicwind Red focus ring */
-  
-  /* Chart colors using brand palette variations */
-  --chart-1: oklch(0.59 0.22 15);                 /* Logicwind Red */
-  --chart-2: oklch(0.11 0.015 240);               /* Logicwind Blue */
-  --chart-3: oklch(0.88 0.02 250);                /* Blue Grey */
-  --chart-4: oklch(0.42 0.02 250);                /* Neutral Grey */
-  --chart-5: oklch(0.75 0.18 15);                 /* Lighter Red variant */
-  
-  /* Sidebar using brand colors */
-  --sidebar: oklch(1 0 0);                        /* White sidebar */
-  --sidebar-foreground: oklch(0.11 0.015 240);    /* Logicwind Blue text */
-  --sidebar-primary: oklch(0.59 0.22 15);         /* Logicwind Red */
-  --sidebar-primary-foreground: oklch(1 0 0);     /* White text on red */
-  --sidebar-accent: oklch(0.88 0.02 250);         /* Blue Grey */
-  --sidebar-accent-foreground: oklch(0.11 0.015 240); /* Logicwind Blue text */
-  --sidebar-border: oklch(0.42 0.02 250);         /* Neutral Grey borders */
-  --sidebar-ring: oklch(0.59 0.22 15);            /* Logicwind Red focus */
-}
 
 @theme inline {
-  /* Brand Colors */
-  --color-hero-lime: var(--hero-lime);
-  --color-deep-navy: var(--deep-navy);
-  --color-light-beige: var(--light-beige);
-  --color-pure-white: var(--pure-white);
-  --color-black: var(--black);
-  
-  /* Legacy brand colors */
-  --color-logicwind-blue: var(--logicwind-blue);
-  --color-logicwind-red: var(--logicwind-red);
-  --color-blue-grey: var(--blue-grey);
-  --color-neutral-grey: var(--neutral-grey);
-
-  /* Legacy support */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  /* Typography */
-  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-sans: Plus Jakarta Sans, sans-serif;
+  --font-mono: JetBrains Mono, monospace;
+  --font-serif: Source Serif 4, serif;
+  --radius: 0.5rem;
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+  --tracking-normal: var(--tracking-normal);
+  --shadow-2xl: var(--shadow-2xl);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-md: var(--shadow-md);
+  --shadow: var(--shadow);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-2xs: var(--shadow-2xs);
+  --spacing: var(--spacing);
+  --letter-spacing: var(--letter-spacing);
+  --shadow-offset-y: var(--shadow-offset-y);
+  --shadow-offset-x: var(--shadow-offset-x);
+  --shadow-spread: var(--shadow-spread);
+  --shadow-blur: var(--shadow-blur);
+  --shadow-opacity: var(--shadow-opacity);
+  --color-shadow-color: var(--shadow-color);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -110,6 +48,7 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
+  --color-destructive-foreground: var(--destructive-foreground);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
@@ -123,96 +62,110 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-body {
-  font-family: var(--font-sans);
-  line-height: 1.6;
+:root {
+  --background: #fafbfd;
+  --foreground: #0e151e;
+  --card: #fafafa;
+  --card-foreground: #0e151e;
+  --popover: #fbfbfc;
+  --popover-foreground: #0e151e;
+  --primary: #f04f4b;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f0f0;
+  --secondary-foreground: #0e151e;
+  --muted: #f2f2f2;
+  --muted-foreground: #303030;
+  --accent: #fef2f2;
+  --accent-foreground: #0e151e;
+  --destructive: #e7000b;
+  --destructive-foreground: #ffffff;
+  --border: #dbdbdb;
+  --input: #cfcfcf;
+  --ring: #f47d7a;
+  --chart-1: #91c5ff;
+  --chart-2: #6f91bc;
+  --chart-3: #6f91bc;
+  --chart-4: #3f5e86;
+  --chart-5: #0e151e;
+  --sidebar: #fafbfd;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-primary: #171717;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #a1a1a1;
+  --font-sans: Poppins, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: Cormorant Garamond, ui-serif, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --radius: 0.625rem;
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
+  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
 }
-
-/* Utility classes for brand colors */
-/* New Logicwind Brand Colors */
-.bg-hero-lime { background-color: var(--hero-lime); }
-.bg-deep-navy { background-color: var(--deep-navy); }
-.bg-light-beige { background-color: var(--light-beige); }
-.text-hero-lime { color: var(--hero-lime); }
-.text-deep-navy { color: var(--deep-navy); }
-.text-light-beige { color: var(--light-beige); }
-.border-hero-lime { border-color: var(--hero-lime); }
-.border-deep-navy { border-color: var(--deep-navy); }
-.border-light-beige { border-color: var(--light-beige); }
-
-/* Legacy brand colors (kept for compatibility) */
-.bg-logicwind-blue { background-color: var(--logicwind-blue); }
-.bg-logicwind-red { background-color: var(--logicwind-red); }
-.bg-blue-grey { background-color: var(--blue-grey); }
-.bg-neutral-grey { background-color: var(--neutral-grey); }
-.text-logicwind-blue { color: var(--logicwind-blue); }
-.text-logicwind-red { color: var(--logicwind-red); }
-.text-blue-grey { color: var(--blue-grey); }
-.text-neutral-grey { color: var(--neutral-grey); }
-.border-logicwind-blue { border-color: var(--logicwind-blue); }
-.border-logicwind-red { border-color: var(--logicwind-red); }
-.border-blue-grey { border-color: var(--blue-grey); }
-.border-neutral-grey { border-color: var(--neutral-grey); }
 
 .dark {
-  /* Dark theme using Logicwind Blue as base */
-  --background: oklch(0.11 0.015 240);                /* Logicwind Blue background */
-  --foreground: oklch(1 0 0);                         /* Pure white text */
-  
-  --card: oklch(0.18 0.02 240);                       /* Slightly lighter blue for cards */
-  --card-foreground: oklch(1 0 0);                    /* White text on cards */
-  
-  --popover: oklch(0.18 0.02 240);                    /* Slightly lighter blue for popovers */
-  --popover-foreground: oklch(1 0 0);                 /* White text in popovers */
-  
-  /* Logicwind Red remains primary accent */
-  --primary: oklch(0.59 0.22 15);                     /* Logicwind Red */
-  --primary-foreground: oklch(1 0 0);                 /* White text on red */
-  
-  /* Blue Grey for secondary elements */
-  --secondary: oklch(0.25 0.02 240);                  /* Darker blue for secondary */
-  --secondary-foreground: oklch(0.88 0.02 250);       /* Blue Grey text */
-  
-  /* Enhanced muted elements with Blue Grey */
-  --muted: oklch(0.22 0.02 240);                      /* Darker blue muted background */
-  --muted-foreground: oklch(0.88 0.02 250);           /* Blue Grey muted text */
-  
-  /* Neutral Grey accent */
-  --accent: oklch(0.42 0.02 250);                     /* Neutral Grey accent */
-  --accent-foreground: oklch(1 0 0);                  /* White text on grey */
-  
-  /* Destructive with better visibility */
-  --destructive: oklch(0.65 0.25 25);                 /* More visible red */
-  --destructive-foreground: oklch(0.98 0 0);          /* High contrast white text */
-  
-  /* Enhanced borders and inputs for dark mode */
-  --border: oklch(0.42 0.02 250);                     /* Neutral Grey borders */
-  --input: oklch(0.42 0.02 250);                      /* Neutral Grey input borders */
-  --ring: oklch(0.59 0.22 15);                        /* Logicwind Red focus ring */
-  
-  /* Updated chart colors for dark mode */
-  --chart-1: oklch(0.59 0.22 15);                     /* Logicwind Red */
-  --chart-2: oklch(0.88 0.02 250);                    /* Blue Grey */
-  --chart-3: oklch(0.42 0.02 250);                    /* Neutral Grey */
-  --chart-4: oklch(0.75 0.18 15);                     /* Lighter Red variant */
-  --chart-5: oklch(0.25 0.02 240);                    /* Darker Blue */
-  
-  /* Enhanced sidebar for dark mode */
-  --sidebar: oklch(0.18 0.02 240);                    /* Slightly lighter blue sidebar */
-  --sidebar-foreground: oklch(1 0 0);                 /* White text */
-  --sidebar-primary: oklch(0.59 0.22 15);             /* Logicwind Red */
-  --sidebar-primary-foreground: oklch(1 0 0);         /* White text on red */
-  --sidebar-accent: oklch(0.42 0.02 250);             /* Neutral Grey accent */
-  --sidebar-accent-foreground: oklch(1 0 0);          /* White text on grey */
-  --sidebar-border: oklch(0.42 0.02 250);             /* Neutral Grey borders */
-  --sidebar-ring: oklch(0.59 0.22 15);                /* Logicwind Red focus */
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #171717;
+  --card-foreground: #fafafa;
+  --popover: #262626;
+  --popover-foreground: #fafafa;
+  --primary: #f04f4b;
+  --primary-foreground: #ffffff;
+  --secondary: #323232;
+  --secondary-foreground: #f2f2f2;
+  --muted: #262626;
+  --muted-foreground: #a1a1a1;
+  --accent: #404040;
+  --accent-foreground: #fafafa;
+  --destructive: #ff6467;
+  --destructive-foreground: #fafafa;
+  --border: #282828;
+  --input: #343434;
+  --ring: #737373;
+  --chart-1: #91c5ff;
+  --chart-2: #3a81f6;
+  --chart-3: #2563ef;
+  --chart-4: #1a4eda;
+  --chart-5: #1f3fad;
+  --sidebar: #171717;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #1447e6;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #282828;
+  --sidebar-ring: #525252;
+  --font-sans: Poppins, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: Cormorant Garamond, ui-serif, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --radius: 0.625rem;
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
+  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
 }
+
 
 @layer base {
   * {
@@ -220,5 +173,6 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    letter-spacing: var(--tracking-normal);
   }
 }

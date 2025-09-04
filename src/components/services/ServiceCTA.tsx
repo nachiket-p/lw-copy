@@ -2,7 +2,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
 
-export function ServiceCTA() {
+interface ServiceCTAProps {
+  content: string;
+}
+
+export function ServiceCTA({ content }: ServiceCTAProps) {
   return (
     <section className="py-20 bg-accent text-accent-foreground">
       <div className="container mx-auto px-4">
@@ -20,14 +24,14 @@ export function ServiceCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-accent hover:bg-white/90">
+            <Button asChild size="lg" variant="default" className="text-lg px-8 py-6">
               <Link href="/contact">
                 Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
             
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10">
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
               <Link href="/the-logicwind-way/agentic-development">
                 Learn More About Our Process
               </Link>

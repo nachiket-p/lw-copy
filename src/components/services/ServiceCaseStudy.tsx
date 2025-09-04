@@ -1,7 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Quote, TrendingUp } from "lucide-react";
 
-export function ServiceCaseStudy() {
+interface ServiceCaseStudyProps {
+  content: string;
+}
+
+export function ServiceCaseStudy({ content }: ServiceCaseStudyProps) {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
